@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit, OnDestroy {
-  cityName: string = "tel-aviv";
+  cityName: string = "haifa";
   weather: Weather;
   subscriptions: Subscription[] = [];
 

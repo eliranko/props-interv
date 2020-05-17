@@ -11,5 +11,6 @@ It also connects to MongoDB atlas to reduce 3rd party API requests.
 The frontend is written in Angular and uses Angular material.
 
 # Installation
-Run the container eliranko/prop-interv:latest from the docker hub
-``` docker run --publish 15000:80 --name pros-interv eliranko/prop-interv:latest ```
+Run the container eliranko/prop-interv:2.0 from the docker hub. Example:
+
+``` docker run --publish 80:80 --name pros-interv eliranko/prop-interv:2.0 ```
