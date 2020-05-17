@@ -6,6 +6,7 @@ type OpenWeather struct {
 }
 
 type Weather struct {
+	ID          int           `json:"id" bson:"_id"`
 	Coord       Corditations  `json:"coord" bson:"Coord"`
 	WeatherData []WeatherData `json:"weather" bson:"WeatherData"`
 	MainData    MainData      `json:"main" bson:"MainData"`

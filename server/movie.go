@@ -6,6 +6,7 @@ type OmdbMovie struct {
 }
 
 type Movie struct {
+	ID       string `json:"imdbID" bson:"_id"`
 	Title    string `json:"Title" bson:"Title"`
 	Year     string `json:"Year" bson:"Year"`
 	Plot     string `json:"Plot" bson:"Plot"`

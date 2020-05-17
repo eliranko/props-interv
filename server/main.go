@@ -6,6 +6,7 @@ import (
 	"github.com/spf13/viper"
 )
 
+// loads up the fields from the configuration file into memory
 func init() {
 	viper.AddConfigPath(".")
 
@@ -14,7 +15,8 @@ func init() {
 	}
 }
 
+// starts the DB connection and the HTTP server
 func main() {
 	go startDb()
-	startHttpServer()
+	startHTTPServer()
 }

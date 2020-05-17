@@ -1,6 +1,7 @@
 {
     "port": "80",
     "omdbPrefix": "http://www.omdbapi.com/?apikey=dce24c91&",
+    "omdbMovieNameQueryString": "t=",
     "weatherBaseUrl": "http://api.openweathermap.org/data/2.5/weather?units=metric&",
     "weatherApiQueryString": "APPID=c2152ce33eec94f628bcb40cda3da446",
     "omdbBadResponse": "False",
