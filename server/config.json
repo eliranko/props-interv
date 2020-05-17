@@ -4,5 +4,9 @@
     "weatherBaseUrl": "http://api.openweathermap.org/data/2.5/weather?units=metric&",
     "weatherApiQueryString": "APPID=c2152ce33eec94f628bcb40cda3da446",
     "omdbBadResponse": "False",
-    "weatherGoodResponse": 200
+    "weatherGoodResponse": 200,
+    "mongoUrl": "mongodb+srv://user:Aa123456@prospera-v8lui.mongodb.net/test?retryWrites=true&w=majority",
+    "mongoDbName": "prosp",
+    "mongoWeatherCollectionName": "weather",
+    "mongoMoviesCollectionName": "movies"
 }
