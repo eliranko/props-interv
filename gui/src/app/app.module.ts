@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { MainViewComponent } from './main-view/main-view.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MatListModule } from '@angular/material/list';
@@ -29,7 +28,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     AppComponent,
     ToolbarComponent,
     SidenavComponent,
-    MainViewComponent,
     MovieDetailsComponent,
     InlineWeatherDataComponent,
     SetWeatherComponent

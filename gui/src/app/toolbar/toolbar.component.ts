@@ -31,12 +31,19 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 
   loadCityData() {
     let storedCity = localStorage.getItem(this.weatherService.storageKey);
+    let prevCity = this.cityName;
     if (storedCity) this.cityName = storedCity;
 
     this.weatherService.getWeather(this.cityName).subscribe(weather => {
       this.weather = weather;
-    }, () => {
-      this.snackBar.open("Server is unavailable at the moment");
+    }, err => {
+      let errorMessage = "Server error"
+      if (err.status == 400) {
+        errorMessage = "Bad request!"
+        this.cityName = prevCity; // bring back to stable
+        localStorage.setItem(this.weatherService.storageKey, this.cityName);
+      }
+      this.snackBar.open(errorMessage);
     });
   }
 }
