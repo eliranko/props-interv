@@ -20,6 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { InlineWeatherDataComponent } from './inline-weather-data/inline-weather-data.component';
 import { SetWeatherComponent } from './set-weather/set-weather.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -44,9 +46,12 @@ import { SetWeatherComponent } from './set-weather/set-weather.component';
     FormsModule,
     HttpClientModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

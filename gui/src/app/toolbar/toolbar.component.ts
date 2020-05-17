@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { WeatherService } from '../weather.service';
 import { Weather } from '../models/Weather';
 import { Subscription } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-toolbar',
@@ -13,7 +14,8 @@ export class ToolbarComponent implements OnInit, OnDestroy {
   weather: Weather;
   subscriptions: Subscription[] = [];
 
-  constructor(private weatherService: WeatherService) { }
+  constructor(private weatherService: WeatherService,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     let storedCity = localStorage.getItem(this.weatherService.storageKey);
@@ -34,6 +36,8 @@ export class ToolbarComponent implements OnInit, OnDestroy {
     this.weatherService.getWeather(this.cityName).subscribe(weather => {
       this.weather = weather;
       console.log(this.weather);
+    }, () => {
+      this.snackBar.open("Server is unavailable at the moment");
     });
   }
 }
