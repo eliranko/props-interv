@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { InlineWeatherDataComponent } from './inline-weather-data/inline-weather-data.component';
+import { SetWeatherComponent } from './set-weather/set-weather.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MatCardModule } from '@angular/material/card';
     ToolbarComponent,
     SidenavComponent,
     MainViewComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    InlineWeatherDataComponent,
+    SetWeatherComponent
   ],
   imports: [
     BrowserModule,
