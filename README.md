@@ -13,4 +13,4 @@ The frontend is written in Angular and uses Angular material.
 # Installation
 Run the container eliranko/prop-interv:3.0 from the docker hub. Example:
 
-``` docker run --publish 80:80 --name pros-interv eliranko/prop-interv:3.0 ```
+``` docker run --publish 80:80 --name interview eliranko/prop-interv:3.0 ```
