@@ -68,7 +68,10 @@ func handleMovieRequest(w http.ResponseWriter, r *http.Request) {
 		}
 
 		omdbMovie = &OmdbMovie{}
-		parseBody(resp, omdbMovie)
+		if err = parseBody(resp, omdbMovie); err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
 		// Check if received valid response
 		if omdbMovie.Response == viper.GetString("omdbBadResponse") {
 			log.Println("request didn't yield any result")
@@ -123,7 +126,11 @@ func handleWeatherRequest(w http.ResponseWriter, r *http.Request) {
 		}
 
 		openWeather = &OpenWeather{}
-		parseBody(resp, openWeather)
+		if err = parseBody(resp, openWeather); err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+
 		// Check if received valid result
 		if openWeather.Response != viper.GetInt("weatherGoodResponse") {
 			log.Println("request didn't yield any result")
