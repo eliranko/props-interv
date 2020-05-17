@@ -16,3 +16,4 @@
 
 # ignore executables
 server/server 
+server/dist/

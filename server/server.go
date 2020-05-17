@@ -124,6 +124,8 @@ func startHttpServer() {
 	r.Use(loggingMiddleware)
 	r.HandleFunc("/api/movie/{name}", handleMovieRequest).Methods("GET")
 	r.HandleFunc("/api/weather/{cityName}", handleWeatherRequest).Methods("GET")
+	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./dist/")))
+
 	log.Println("listening on :", viper.GetString("port"))
 	srv := &http.Server{
 		Handler: r,
