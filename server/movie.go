@@ -9,7 +9,7 @@ type Movie struct {
 	Title    string `json:"Title"`
 	Year     string `json:"Year"`
 	Plot     string `json:"Plot"`
-	Language string `json:"English"`
+	Language string `json:"Language"`
 	Poster   string `json:"Poster"`
 	Rating   string `json:"imdbRating"`
 }

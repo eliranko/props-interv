@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="search">
+        <mat-form-field appearance="fill">
+            <mat-label>Movie name</mat-label>
+            <input matInput [(ngModel)]="name">
+        </mat-form-field>
+        <button mat-fab color="primary" (click)="onSearch()">
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+
+    <div class="movie" *ngIf="chosenMovie">
+        <mat-card>
+            <mat-card-header>
+                <!-- <div mat-card-avatar class="header-image"></div> -->
+                <mat-card-title>{{chosenMovie.Title}}</mat-card-title>
+                <mat-card-subtitle>Year: {{chosenMovie.Year}}, Language: {{chosenMovie.Language}}, Rating:
+                    {{chosenMovie.imdbRating}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="chosenMovie.Poster" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>{{chosenMovie.Plot}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
