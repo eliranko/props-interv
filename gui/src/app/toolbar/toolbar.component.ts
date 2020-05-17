@@ -35,7 +35,6 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 
     this.weatherService.getWeather(this.cityName).subscribe(weather => {
       this.weather = weather;
-      console.log(this.weather);
     }, () => {
       this.snackBar.open("Server is unavailable at the moment");
     });

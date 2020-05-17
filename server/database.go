@@ -49,6 +49,8 @@ func startDb() {
 			log.Println(err)
 			continue
 		}
+
+		break
 	}
 
 	log.Println("Connected to db at ", viper.GetString("mongoUrl"))

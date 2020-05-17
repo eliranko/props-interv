@@ -20,7 +20,6 @@ export class MovieDetailsComponent implements OnInit {
   onSearch() {
     this.movies.getMovie(this.name).subscribe(movie => {
       this.chosenMovie = movie
-      console.log(this.chosenMovie);
     }, () => {
       this.snackBar.open("Server is unavailable at the moment");
     });

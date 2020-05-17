@@ -14,7 +14,6 @@ export class SetWeatherComponent implements OnInit {
   }
 
   onClick() {
-    console.log(this.name);
     localStorage.setItem(this.weatherService.storageKey, this.name);
     this.weatherService.notifyCityUpdate();
   }

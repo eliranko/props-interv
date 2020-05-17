@@ -17,7 +17,7 @@
                 <mat-card-subtitle>Year: {{chosenMovie.Year}}, Language: {{chosenMovie.Language}}, Rating:
                     {{chosenMovie.imdbRating}}</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image [src]="chosenMovie.Poster" alt="Photo of a Shiba Inu">
+            <img *ngIf="chosenMovie.Poster != 'N/A'" mat-card-image [src]="chosenMovie.Poster">
             <mat-card-content>
                 <p>{{chosenMovie.Plot}}</p>
             </mat-card-content>
